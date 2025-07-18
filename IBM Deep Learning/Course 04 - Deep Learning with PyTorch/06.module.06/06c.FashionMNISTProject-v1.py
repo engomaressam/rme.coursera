@@ -32,17 +32,19 @@ composed = transforms.Compose([
 dataset_train = dsets.FashionMNIST(root='.fashion/data', train=True, transform=composed, download=True)
 dataset_val = dsets.FashionMNIST(root='.fashion/data', train=False, transform=composed, download=True)
 
-# --- Show and Save First 3 Validation Images (Auto-save for Coursera) ---
-for n, data_sample in enumerate(dataset_val):
-    plt.imshow(data_sample[0].numpy().reshape(IMAGE_SIZE, IMAGE_SIZE), cmap='gray')
-    plt.title('y = ' + str(data_sample[1]))
-    img_filename = f"val_image_{n+1}.png"
-    plt.savefig(img_filename)
-    print(f"Saved validation image {n+1} as {img_filename}")
-    plt.close()
-    if n == 2:
-        break
-# Take a screenshot of the above 3 images for submission
+# --- Show and Save First 3 Validation Images Together in a PDF (for Coursera) ---
+from matplotlib.backends.backend_pdf import PdfPages
+val_images_pdf = "val_images.pdf"
+with PdfPages(val_images_pdf) as pdf:
+    for n, data_sample in enumerate(dataset_val):
+        plt.imshow(data_sample[0].numpy().reshape(IMAGE_SIZE, IMAGE_SIZE), cmap='gray')
+        plt.title('y = ' + str(data_sample[1]))
+        pdf.savefig()  # saves the current figure into the PDF
+        print(f"Added validation image {n+1} to {val_images_pdf}")
+        plt.close()
+        if n == 2:
+            break
+print(f"Saved first 3 validation images together in {val_images_pdf}")
 
 # --- CNN Model Definitions ---
 class CNN_batch(nn.Module):
