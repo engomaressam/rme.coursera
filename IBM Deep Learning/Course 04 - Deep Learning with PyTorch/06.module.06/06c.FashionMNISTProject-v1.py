@@ -32,10 +32,14 @@ composed = transforms.Compose([
 dataset_train = dsets.FashionMNIST(root='.fashion/data', train=True, transform=composed, download=True)
 dataset_val = dsets.FashionMNIST(root='.fashion/data', train=False, transform=composed, download=True)
 
-# --- Show First 3 Validation Images (Take Screenshot Here) ---
+# --- Show and Save First 3 Validation Images (Auto-save for Coursera) ---
 for n, data_sample in enumerate(dataset_val):
-    show_data(data_sample)
-    plt.show()
+    plt.imshow(data_sample[0].numpy().reshape(IMAGE_SIZE, IMAGE_SIZE), cmap='gray')
+    plt.title('y = ' + str(data_sample[1]))
+    img_filename = f"val_image_{n+1}.png"
+    plt.savefig(img_filename)
+    print(f"Saved validation image {n+1} as {img_filename}")
+    plt.close()
     if n == 2:
         break
 # Take a screenshot of the above 3 images for submission
@@ -122,7 +126,7 @@ for epoch in range(n_epochs):
     cost_list.append(cost)
     print(f"Epoch {epoch+1}: Cost={cost:.4f}, Accuracy={accuracy*100:.2f}%")
 
-# --- Plot Cost and Accuracy (Take Screenshot Here) ---
+# --- Plot Cost and Accuracy (Auto-save for Coursera) ---
 fig, ax1 = plt.subplots()
 color = 'tab:red'
 ax1.plot(cost_list, color=color)
@@ -136,7 +140,12 @@ ax2.set_xlabel('epoch', color=color)
 ax2.plot(accuracy_list, color=color)
 ax2.tick_params(axis='y', color=color)
 fig.tight_layout()
-plt.show()
+plot_png = "cost_accuracy_plot.png"
+plot_pdf = "cost_accuracy_plot.pdf"
+plt.savefig(plot_png)
+plt.savefig(plot_pdf)
+print(f"Saved cost/accuracy plot as {plot_png} and {plot_pdf}")
+plt.close()
 # Take a screenshot of the above plot for submission
 
 # --- End of Script --- 
