@@ -1,0 +1,173 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=2 cm,
+    bottom=2 cm,
+    left=2 cm,
+    right=2 cm,
+    footskip=1.0 cm,
+]{geometry}
+\usepackage[explicit]{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 79, 144}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\hypersetup{
+    pdftitle={Omar Essam El-Din Mohamed's CV},
+    pdfauthor={Omar Essam El-Din Mohamed},
+    colorlinks=true,
+    urlcolor=primaryColor
+}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+
+% Section Formatting
+\titleformat{\section}
+{\normalfont\Large\bfseries\color{primaryColor}}
+{\thesection}{1em}{}
+\titlespacing*{\section}
+{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+% Add a horizontal rule after each section title
+\titleformat{name=\section}
+  {\normalfont\Large\bfseries\color{primaryColor}}
+  {\thesection}{1em}{\color{primaryColor}\MakeUppercase{#1}\vspace{0.5ex}\titlerule}
+
+\begin{document}
+\begin{center}
+    {\LARGE \textbf{Omar Essam El-Din Mohamed}} \\
+    {Zahraa El Maadi, Cairo, Egypt} \\
+    {\faPhone* \hspace{0.2cm} +20 1004819774} \hspace{1cm}
+    {\href{mailto:eng.omar.e@gmail.com}{\faEnvelope[regular] \hspace{0.2cm} eng.omar.e@gmail.com}} \hspace{1cm}
+            {\href{https://www.linkedin.com/in/omar-essam-b602279b}{\faLinkedin \hspace{0.2cm} LinkedIn}} \hspace{1cm}
+    {\href{https://github.com/engomaressam}{\faGithub \hspace{0.2cm} GitHub}}
+\end{center}
+
+\section{Professional Summary}
+A highly skilled Data Engineering And Machine Learning Lead with extensive experience in construction, civil engineering, data engineering, and machine learning. Currently specializing in AI development, web AI applications, and full-stack websites, with a proven track record of delivering innovative solutions like chatbots with local LLMs and running background commands with AI Agents to support company operations. Adept at leveraging advanced technologies, including GPU-accelerated development, to optimize workflows and enhance business insights under tight deadlines.
+
+\section{Education}
+\textbf{Cairo University}, Bachelor of Science in Civil Engineering, May 2013 \\
+\textit{Overall Grade:} Good (C) \\
+\textit{Project Grade:} Excellent (A) {Graduation Project:} Steel Bridges Design \\
+
+\textbf{Orouba Language School}, Graduation Score: 98.9\% (405.5/410)
+
+\section{Professional Experience}
+\textbf{\textcolor{primaryColor}{Programming and Data Engineering Experience (6 years of experience)}}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Data Engineering And Machine Learning Lead} | Rowad Modern Engineering (Jan 2025 – Present)
+    \begin{itemize}[leftmargin=1cm]
+        \item Developed a Retrieval-Augmented Generation (RAG) chatbot using embeddings to enable efficient document-based question answering, improving internal knowledge access.
+        \item Built a full-stack website integrating Oracle ERP and on-premises data warehouse, allowing users to extract data, query insights, and visualize results for enhanced decision-making.
+        \item Leveraged NVIDIA 4090 GPUs to develop AI agents for automating coding, debugging, and workflow optimization, significantly improving team productivity.
+    \end{itemize}
+    \item \textbf{Data Engineering Lead} | Rowad Modern Engineering (Jul 2023 – Dec 2024)
+    \begin{itemize}[leftmargin=1cm]
+        \item Established a data warehouse team, integrated data sources for improved reporting and visualization.
+    \end{itemize}
+    \item \textbf{Data Scientist} | Rowad Modern Engineering (Jul 2021 – Dec 2022)
+    \begin{itemize}[leftmargin=1cm]
+        \item Developed machine learning models for cash flow predictions.
+    \end{itemize}
+    \item \textbf{Senior Data Engineer} | Rowad Modern Engineering (Nov 2020 – Jun 2021)
+    \begin{itemize}[leftmargin=1cm]
+        \item Automated repetitive tasks using Python, saving significant resource hours.
+    \end{itemize}
+    \item \textbf{IT Networking / Data Engineer} | Rowad Modern Engineering (Jan 2020 – Oct 2020)
+    \begin{itemize}[leftmargin=1cm]
+        \item Maintained MySQL databases on Linux Servers, ensuring seamless data access and storage.
+    \end{itemize}
+    \item \textbf{Co-Owner} | Cyber Cafe (2009 – 2011)
+    \begin{itemize}[leftmargin=1cm]
+        \item Managed hardware and networking for all systems.
+    \end{itemize}
+\end{itemize}
+
+\newpage
+\textbf{\textcolor{primaryColor}{Construction and Civil Engineering Experience (7 years of experience)}}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Project Control Section Head} | Rowad Modern Engineering, Bridges Sector (Sep 2019 – Dec 2020)
+    \begin{itemize}[leftmargin=1cm]
+        \item Managed the project control team for bridge projects. Streamlined cost and schedule reporting processes. Enhanced coordination between construction and planning teams.
+    \end{itemize}
+    \item \textbf{Senior Project Control Engineer} | Rowad Modern Engineering, Head Office (Jan 2017 – Aug 2019)
+    \begin{itemize}[leftmargin=1cm]
+        \item Oversaw multiple project schedules and cost control measures. Delivered periodic project performance reports to stakeholders.
+    \end{itemize}
+    \item \textbf{Project Control Engineer} | Rowad Modern Engineering (Apr 2016 – Dec 2016)
+    \begin{itemize}[leftmargin=1cm]
+        \item Worked on major infrastructure projects including Nefisha Bridge and El Sokhna Tunnel.
+    \end{itemize}
+    \item \textbf{Tendering Engineer} | Rowad Modern Engineering, Tender Department (Jan 2016 – Mar 2016)
+    \begin{itemize}[leftmargin=1cm]
+        \item Evaluated project tenders for technical and financial feasibility.
+    \end{itemize}
+    \item \textbf{Planning/Cost Control Engineer} | Concrete Plus (May 2011 – Aug 2013)
+    \begin{itemize}[leftmargin=1cm]
+        \item Coordinated cost control for multiple projects from the head office.
+    \end{itemize}
+    \item \textbf{Site Engineer} | Concrete Plus, Porto October Project (Aug 2010 – Aug 2011)
+    \begin{itemize}[leftmargin=1cm]
+        \item Supervised on-site construction activities, ensuring compliance with design specifications.
+    \end{itemize}
+\end{itemize}
+
+\section{Key Skills}
+\vspace{-1.5ex}
+\begin{itemize}[leftmargin=*, itemsep=0.5ex]
+    \item \textbf{Data Engineering:} \\
+    ETL pipelines, Airflow, Spark, ERP systems, Docker
+    \item \textbf{Machine Learning and AI:} \\
+    RAG, embeddings, GPU-accelerated development (NVIDIA 4090), AI agent development
+    \item \textbf{Data Visualization and BI Tools:} \\
+    Power BI, Looker, Tableau, visualization libraries within Python
+    \item \textbf{Engineering Tools:} \\
+    Primavera P6, MS Project, Synchro, Revit, Navisworks, AutoCAD
+    \item \textbf{Programming:} \\
+    Python, SQL, Java, R, C++, C\# (familiar)
+    \item \textbf{Software:} \\
+    Microsoft Office, Adobe Photoshop, Illustrator, After Effects
+    \item \textbf{Construction Expertise:} \\
+    Cost Control, Tender Evaluation, Risk Management
+    \item \textbf{Languages:} \\
+    Arabic (Native), English (Fluent)
+\end{itemize}
+
+\newpage
+\section{Certifications}
+\vspace{-1ex}
+\begin{itemize}[leftmargin=*, itemsep=0.5ex]
+    \item Certified Data Scientist Professional (Epsilon AI)
+    \item Primavera P6
+    \item Python Programming
+    \item PMP Certification
+    \item CCNA and CCNP Networking
+    \item Steel Bridges Design
+    \item Develop Generative AI Applications: Get Started (IBM, Coursera, Jul 2025)
+    \item Build RAG Applications: Get Started (IBM, Coursera, Jul 2025)
+    \item Vector Databases for RAG: An Introduction (IBM, Coursera, Jul 2025)
+\end{itemize}
+
+\section{Personal Projects}
+\vspace{-1ex}
+\begin{itemize}[leftmargin=*, itemsep=0.5ex]
+    \item Guitarist in an Iron Maiden cover band.
+    \item Created a music YouTube channel with over 100,000 subscribers.
+    \item Co-created the social media group ESS.
+    \item Co-hosted a political podcast.
+    \item Wrote two sci-fi novels.
+    \item Worked in the rescue of street cats and dogs in Maadi.
+\end{itemize}
+
+\end{document}
